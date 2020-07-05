@@ -125,5 +125,8 @@ USE_TZ = True
 STATIC_URL = '/static/'
 django_heroku.settings(locals())
 
-# 
+# specifies the bootstrap pack version number 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+# make a default login redirection
+LOGIN_REDIRECT_URL = 'blog-home'
