@@ -12,7 +12,8 @@ class StatusForm(forms.ModelForm):
         ]
 
     def clean_content(self, *args, **kwargs):
-        content = self.cleaned_data
+        data = self.cleaned_data
+        content = data.get('content')
         if len(content) > 50:
             raise forms.ValidationError('Content is limited to 50 characters..')
         return content
